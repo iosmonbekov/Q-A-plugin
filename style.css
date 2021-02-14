@@ -1,0 +1,52 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+#qanda_container {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.qanda_text {
+  display: none;
+}
+.qanda_item.active .qanda_text {
+  display: block;
+}
+
+.qanda_question {
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.qanda_question:hover {
+  text-decoration: underline;
+}
+
+.qanda_item {
+  border: 1px solid grey;
+  border-bottom: 0;
+  padding: 15px 10px;
+  border-radius: 5px;
+  position: relative;
+  transition: max-height 3s, background 0.5s ease;
+  max-height: 50px;
+}
+.qanda_item.active {
+  background-color: rgb(231, 231, 231);
+  max-height: 700px;
+}
+.qanda_item.hide {
+  background-color: #fff;
+  max-height: 50px;
+}
+
+#qanda_container div:last-child {
+  border-bottom: 1px solid grey;
+}
+
+.qanda_cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
