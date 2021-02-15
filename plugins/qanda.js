@@ -15,9 +15,7 @@ const _createQanda = (options) => {
 };
 
 $.qanda = function (options) {
-  const animation_speed = 200;
   const $qanda = _createQanda(options);
-  let closing = false;
 
   const item = document.getElementsByClassName("qanda_item");
   const cover = document.getElementsByClassName("qanda_cover");
@@ -40,12 +38,8 @@ $.qanda = function (options) {
       cover[id - 1].classList.add("active");
     },
     close(id) {
-      $qanda.classList.remove("active");
       cover[id - 1].classList.remove("active");
-      $qanda.classList.add("hide");
-      setTimeout(() => {
-        $qanda.classList.remove("hide");
-      }, animation_speed);
+      $qanda.classList.remove("active");
     },
   };
 
